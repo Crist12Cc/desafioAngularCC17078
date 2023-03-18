@@ -1,0 +1,54 @@
+$soft_red: hsl(5, 85%, 63%)
+$mobile: 376px
+$very_dark_blue: hsl(240, 100%, 5%)
+$grayish_blue: hsl(233, 8%, 79%)
+
+.principal
+  margin-top: 2rem
+  display: grid
+  grid-template-columns: 325px 325px
+  grid-template-rows: 200px 100px 100px
+  gap: 0px 0px
+  grid-template-areas: "imagen imagen" "titulo parrafo" "titulo boton"
+
+.imagen
+  grid-area: imagen
+  img
+    width: 100%
+    height: 100%
+    display: block
+.titulo
+  grid-area: titulo
+  p
+    margin-top: 1rem
+    margin-bottom: 0
+    padding: 0
+    font-weight: bold
+    font-size: 45px
+.parrafo
+  grid-area: parrafo
+  color: $grayish_blue
+.boton
+  grid-area: boton
+  button
+    margin-top: 2rem
+    text-transform: uppercase
+    background: $soft_red
+    color: white
+    width: 140px
+    height: 50px
+    border-color: $soft_red
+
+    &:hover
+      background: $very_dark_blue
+      border-color: $very_dark_blue
+
+@media only screen and (max-width: $mobile)
+  .principal
+    margin-left: 0rem
+    margin-top: 0rem
+    grid-template-columns: auto
+    grid-template-rows: auto auto auto auto
+    width: auto
+    height: auto
+    grid-template-areas: "imagen" "titulo" "parrafo" "boton"

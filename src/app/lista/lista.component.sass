@@ -1,0 +1,49 @@
+$soft_orange: hsl(35, 77%, 62%)
+$mobile: 376px
+$dark_grayish_blue: hsl(236, 13%, 42%)
+$very_dark_blue: hsl(240, 100%, 5%)
+
+.lista
+  margin-top: 2rem
+  padding-left: 1rem
+  padding-right: 1rem
+  background: $very_dark_blue
+  display: grid
+  grid-template-columns: 300px
+  grid-template-rows: 25px 125px 125px 125px
+  gap: 0px 0px
+  grid-template-areas: "titulo" "titulo1" "titulo2" "titulo3"
+
+.titulo
+  grid-area: titulo
+  .resaltar-siempre
+    color: $soft_orange
+    font-size: 20px
+.titulo1
+  grid-area: titulo1
+  margin-top: 1rem
+  border-bottom: 1px solid $dark_grayish_blue
+.titulo2
+  grid-area: titulo2
+  border-bottom: 1px solid $dark_grayish_blue
+.titulo3
+  grid-area: titulo3
+
+.resaltar
+  color: white
+
+  &:hover
+    color: $soft_orange
+
+.normal
+  color: $dark_grayish_blue
+
+@media only screen and (max-width: $mobile)
+  .lista
+    margin-right: 0rem
+    margin-top: 2rem
+    grid-template-columns: auto
+    grid-template-rows: auto auto auto auto
+    width: auto
+    height: auto
+    grid-template-areas: "titulo" "titulo1" "titulo2" "titulo3"

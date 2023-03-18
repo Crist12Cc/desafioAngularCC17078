@@ -1,0 +1,22 @@
+$mobile: 376px
+.compone
+  margin-left: 8rem
+  margin-right: 8rem
+  display: grid
+  grid-template-columns: 700px 325px
+  grid-template-rows: 425px 150px
+  gap: 0px 0px
+  grid-template-areas: "ctitulo clista" "copcion copcion"
+
+.ctitulo
+  grid-area: ctitulo
+.clista
+  grid-area: clista
+.copcion
+  grid-area: copcion
+
+@media only screen and (max-width: $mobile)
+  .compone
+    margin-left: 0
+    margin-right: 0
+    display: block

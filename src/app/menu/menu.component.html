@@ -1,0 +1,23 @@
+<div class="contenedor">
+  <div class="menu-completo">
+    <div class="icono">
+      <a href="#"><img src="../../assets/logo.svg" /></a>
+    </div>
+    <nav>
+      <div class="menu-movil" [ngClass]="{ active: activar }">
+        <a
+          id="id-movil"
+          href="#!"
+          [ngClass]="{ active: activar }"
+          (click)="mostrar()"
+          ><span></span
+        ></a>
+      </div>
+      <ul class="menu-lista" [ngClass]="{ active: activar }">
+        <li *ngFor="let item of menu">
+          <a href="#">{{ item }}</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
